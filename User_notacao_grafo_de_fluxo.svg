@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2256pt" height="155pt" viewBox="0.00 0.00 2256.00 155.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 151.42)">
+<title>FluxoUser</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-151.42 2252.21,-151.42 2252.21,4 -4,4"/>
+<!-- Start -->
+<g id="node1" class="node">
+<title>Start</title>
+<polygon fill="none" stroke="black" points="68.91,-75.42 0,-75.42 0,-39.42 68.91,-39.42 68.91,-75.42"/>
+<text xml:space="preserve" text-anchor="middle" x="34.46" y="-53.22" font-family="Arial" font-size="14.00">Começo</text>
+</g>
+<!-- verificar -->
+<g id="node6" class="node">
+<title>verificar</title>
+<polygon fill="none" stroke="black" points="303.99,-75.42 105.91,-75.42 105.91,-39.42 303.99,-39.42 303.99,-75.42"/>
+<text xml:space="preserve" text-anchor="middle" x="204.95" y="-53.22" font-family="Arial" font-size="14.00">verificarUsuario(login, senha)</text>
+</g>
+<!-- Start&#45;&gt;verificar -->
+<g id="edge1" class="edge">
+<title>Start-&gt;verificar</title>
+<path fill="none" stroke="black" d="M69.15,-57.42C76.78,-57.42 85.29,-57.42 94.22,-57.42"/>
+<polygon fill="black" stroke="black" points="94.21,-60.92 104.21,-57.42 94.21,-53.92 94.21,-60.92"/>
+</g>
+<!-- conectarBD -->
+<g id="node2" class="node">
+<title>conectarBD</title>
+<polygon fill="none" stroke="black" points="439.45,-75.42 340.99,-75.42 340.99,-39.42 439.45,-39.42 439.45,-75.42"/>
+<text xml:space="preserve" text-anchor="middle" x="390.22" y="-53.22" font-family="Arial" font-size="14.00">conectarBD()</text>
+</g>
+<!-- try_conn -->
+<g id="node3" class="node">
+<title>try_conn</title>
+<polygon fill="none" stroke="black" points="627.83,-78.22 476.45,-78.22 476.45,-36.62 627.83,-36.62 627.83,-78.22"/>
+<text xml:space="preserve" text-anchor="middle" x="552.14" y="-61.62" font-family="Arial" font-size="14.00">Tentar carregar driver</text>
+<text xml:space="preserve" text-anchor="middle" x="552.14" y="-44.82" font-family="Arial" font-size="14.00">&amp; abrir conexão</text>
+</g>
+<!-- conectarBD&#45;&gt;try_conn -->
+<g id="edge3" class="edge">
+<title>conectarBD-&gt;try_conn</title>
+<path fill="none" stroke="black" d="M439.64,-57.42C447.63,-57.42 456.12,-57.42 464.71,-57.42"/>
+<polygon fill="black" stroke="black" points="464.51,-60.92 474.51,-57.42 464.51,-53.92 464.51,-60.92"/>
+</g>
+<!-- conn_success -->
+<g id="node4" class="node">
+<title>conn_success</title>
+<polygon fill="none" stroke="black" points="780.19,-102.42 706.61,-102.42 706.61,-66.42 780.19,-66.42 780.19,-102.42"/>
+<text xml:space="preserve" text-anchor="middle" x="743.4" y="-80.22" font-family="Arial" font-size="14.00">Conn OK</text>
+</g>
+<!-- try_conn&#45;&gt;conn_success -->
+<g id="edge4" class="edge">
+<title>try_conn-&gt;conn_success</title>
+<path fill="none" stroke="black" d="M628.21,-68.13C650.64,-71.33 674.61,-74.74 694.76,-77.62"/>
+<polygon fill="black" stroke="black" points="694.25,-81.08 704.65,-79.03 695.24,-74.15 694.25,-81.08"/>
+<text xml:space="preserve" text-anchor="middle" x="667.22" y="-80.64" font-family="Times,serif" font-size="14.00">sucesso</text>
+</g>
+<!-- conn_fail -->
+<g id="node5" class="node">
+<title>conn_fail</title>
+<polygon fill="none" stroke="black" points="934.03,-52.42 798.19,-52.42 798.19,-16.42 934.03,-16.42 934.03,-52.42"/>
+<text xml:space="preserve" text-anchor="middle" x="866.11" y="-30.22" font-family="Arial" font-size="14.00">Conn NULL / Falha</text>
+</g>
+<!-- try_conn&#45;&gt;conn_fail -->
+<g id="edge5" class="edge">
+<title>try_conn-&gt;conn_fail</title>
+<path fill="none" stroke="black" d="M628.26,-51.88C676.09,-48.35 737.92,-43.79 786.42,-40.22"/>
+<polygon fill="black" stroke="black" points="786.59,-43.71 796.3,-39.49 786.07,-36.73 786.59,-43.71"/>
+<text xml:space="preserve" text-anchor="middle" x="667.22" y="-54.45" font-family="Times,serif" font-size="14.00">falha</text>
+</g>
+<!-- montar_sql -->
+<g id="node7" class="node">
+<title>montar_sql</title>
+<polygon fill="none" stroke="black" points="1179.47,-115.62 952.03,-115.62 952.03,-57.22 1179.47,-57.22 1179.47,-115.62"/>
+<text xml:space="preserve" text-anchor="middle" x="1065.75" y="-99.02" font-family="Arial" font-size="14.00">Montar SQL:</text>
+<text xml:space="preserve" text-anchor="middle" x="1065.75" y="-82.22" font-family="Arial" font-size="14.00">SELECT nome FROM usuarios</text>
+<text xml:space="preserve" text-anchor="middle" x="1065.75" y="-65.42" font-family="Arial" font-size="14.00">WHERE login='...' AND senha='...'</text>
+</g>
+<!-- conn_success&#45;&gt;montar_sql -->
+<g id="edge6" class="edge">
+<title>conn_success-&gt;montar_sql</title>
+<path fill="none" stroke="black" d="M780.52,-84.64C819.26,-84.88 882.93,-85.28 940.21,-85.64"/>
+<polygon fill="black" stroke="black" points="940.03,-89.14 950.05,-85.7 940.07,-82.14 940.03,-89.14"/>
+</g>
+<!-- catch_erro -->
+<g id="node13" class="node">
+<title>catch_erro</title>
+<ellipse fill="none" stroke="black" cx="1635.38" cy="-29.42" rx="49.83" ry="29.42"/>
+<text xml:space="preserve" text-anchor="middle" x="1635.38" y="-33.62" font-family="Arial" font-size="14.00">Exceção</text>
+<text xml:space="preserve" text-anchor="middle" x="1635.38" y="-16.82" font-family="Arial" font-size="14.00">(catch)</text>
+</g>
+<!-- conn_fail&#45;&gt;catch_erro -->
+<g id="edge7" class="edge">
+<title>conn_fail-&gt;catch_erro</title>
+<path fill="none" stroke="black" d="M934.53,-33.98C1082.31,-33.01 1432.83,-30.73 1573.96,-29.81"/>
+<polygon fill="black" stroke="black" points="1573.87,-33.31 1583.84,-29.74 1573.82,-26.31 1573.87,-33.31"/>
+</g>
+<!-- verificar&#45;&gt;conectarBD -->
+<g id="edge2" class="edge">
+<title>verificar-&gt;conectarBD</title>
+<path fill="none" stroke="black" d="M304.29,-57.42C312.73,-57.42 321.1,-57.42 329.1,-57.42"/>
+<polygon fill="black" stroke="black" points="329.02,-60.92 339.02,-57.42 329.02,-53.92 329.02,-60.92"/>
+</g>
+<!-- exec_stmt -->
+<g id="node8" class="node">
+<title>exec_stmt</title>
+<polygon fill="none" stroke="black" points="1473.32,-107.22 1216.47,-107.22 1216.47,-65.62 1473.32,-65.62 1473.32,-107.22"/>
+<text xml:space="preserve" text-anchor="middle" x="1344.9" y="-90.62" font-family="Arial" font-size="14.00">Statement st = conn.createStatement()</text>
+<text xml:space="preserve" text-anchor="middle" x="1344.9" y="-73.82" font-family="Arial" font-size="14.00">ResultSet rs = st.executeQuery(sql)</text>
+</g>
+<!-- montar_sql&#45;&gt;exec_stmt -->
+<g id="edge8" class="edge">
+<title>montar_sql-&gt;exec_stmt</title>
+<path fill="none" stroke="black" d="M1179.88,-86.42C1188.11,-86.42 1196.47,-86.42 1204.82,-86.42"/>
+<polygon fill="black" stroke="black" points="1204.7,-89.92 1214.7,-86.42 1204.7,-82.92 1204.7,-89.92"/>
+</g>
+<!-- cond_rs -->
+<g id="node9" class="node">
+<title>cond_rs</title>
+<polygon fill="none" stroke="black" points="1635.38,-112.42 1558.3,-94.42 1635.38,-76.42 1712.45,-94.42 1635.38,-112.42"/>
+<text xml:space="preserve" text-anchor="middle" x="1635.38" y="-90.22" font-family="Arial" font-size="14.00">rs.next() ?</text>
+</g>
+<!-- exec_stmt&#45;&gt;cond_rs -->
+<g id="edge9" class="edge">
+<title>exec_stmt-&gt;cond_rs</title>
+<path fill="none" stroke="black" d="M1473.69,-89.96C1500.62,-90.71 1528.33,-91.47 1552.99,-92.16"/>
+<polygon fill="black" stroke="black" points="1552.85,-95.66 1562.94,-92.43 1553.05,-88.66 1552.85,-95.66"/>
+</g>
+<!-- exec_stmt&#45;&gt;catch_erro -->
+<g id="edge13" class="edge">
+<title>exec_stmt-&gt;catch_erro</title>
+<path fill="none" stroke="black" d="M1453.32,-65.19C1495.09,-56.94 1541.28,-47.81 1576.55,-40.84"/>
+<polygon fill="black" stroke="black" points="1576.98,-44.32 1586.12,-38.95 1575.63,-37.46 1576.98,-44.32"/>
+<text xml:space="preserve" text-anchor="middle" x="1515.81" y="-60.41" font-family="Times,serif" font-size="14.00">Exceção</text>
+</g>
+<!-- set_nome -->
+<g id="node10" class="node">
+<title>set_nome</title>
+<polygon fill="none" stroke="black" points="2039.63,-130.22 1846.78,-130.22 1846.78,-88.62 2039.63,-88.62 2039.63,-130.22"/>
+<text xml:space="preserve" text-anchor="middle" x="1943.2" y="-113.62" font-family="Arial" font-size="14.00">nome = rs.getString("nome")</text>
+<text xml:space="preserve" text-anchor="middle" x="1943.2" y="-96.82" font-family="Arial" font-size="14.00">result = true</text>
+</g>
+<!-- cond_rs&#45;&gt;set_nome -->
+<g id="edge10" class="edge">
+<title>cond_rs-&gt;set_nome</title>
+<path fill="none" stroke="black" d="M1700.86,-97.58C1739.8,-99.49 1790.38,-101.97 1835.18,-104.17"/>
+<polygon fill="black" stroke="black" points="1834.76,-107.65 1844.92,-104.64 1835.11,-100.66 1834.76,-107.65"/>
+<text xml:space="preserve" text-anchor="middle" x="1779.62" y="-107.9" font-family="Times,serif" font-size="14.00">sim</text>
+</g>
+<!-- ret_false -->
+<g id="node12" class="node">
+<title>ret_false</title>
+<polygon fill="none" stroke="black" points="1986.22,-63.42 1904.19,-63.42 1900.19,-59.42 1900.19,-27.42 1982.22,-27.42 1986.22,-31.42 1986.22,-63.42"/>
+<polyline fill="none" stroke="black" points="1982.22,-59.42 1900.19,-59.42"/>
+<polyline fill="none" stroke="black" points="1982.22,-59.42 1982.22,-27.42"/>
+<polyline fill="none" stroke="black" points="1982.22,-59.42 1986.22,-63.42"/>
+<text xml:space="preserve" text-anchor="middle" x="1943.2" y="-41.22" font-family="Arial" font-size="14.00">return false</text>
+</g>
+<!-- cond_rs&#45;&gt;ret_false -->
+<g id="edge11" class="edge">
+<title>cond_rs-&gt;ret_false</title>
+<path fill="none" stroke="black" d="M1681.34,-86.76C1696.89,-84.14 1714.43,-81.22 1730.45,-78.62 1784.29,-69.88 1845.88,-60.26 1888.71,-53.64"/>
+<polygon fill="black" stroke="black" points="1889.15,-57.11 1898.5,-52.13 1888.09,-50.19 1889.15,-57.11"/>
+<text xml:space="preserve" text-anchor="middle" x="1779.62" y="-82.82" font-family="Times,serif" font-size="14.00">não</text>
+</g>
+<!-- ret_true -->
+<g id="node11" class="node">
+<title>ret_true</title>
+<polygon fill="none" stroke="black" points="2157.21,-147.42 2080.63,-147.42 2076.63,-143.42 2076.63,-111.42 2153.21,-111.42 2157.21,-115.42 2157.21,-147.42"/>
+<polyline fill="none" stroke="black" points="2153.21,-143.42 2076.63,-143.42"/>
+<polyline fill="none" stroke="black" points="2153.21,-143.42 2153.21,-111.42"/>
+<polyline fill="none" stroke="black" points="2153.21,-143.42 2157.21,-147.42"/>
+<text xml:space="preserve" text-anchor="middle" x="2116.92" y="-125.22" font-family="Arial" font-size="14.00">return true</text>
+</g>
+<!-- set_nome&#45;&gt;ret_true -->
+<g id="edge12" class="edge">
+<title>set_nome-&gt;ret_true</title>
+<path fill="none" stroke="black" d="M2040.1,-120.59C2048.67,-121.58 2057.1,-122.57 2065.05,-123.49"/>
+<polygon fill="black" stroke="black" points="2064.47,-126.95 2074.81,-124.63 2065.28,-119.99 2064.47,-126.95"/>
+</g>
+<!-- end -->
+<g id="node14" class="node">
+<title>end</title>
+<polygon fill="none" stroke="black" points="2248.21,-101.42 2194.21,-101.42 2194.21,-65.42 2248.21,-65.42 2248.21,-101.42"/>
+<text xml:space="preserve" text-anchor="middle" x="2221.21" y="-79.22" font-family="Arial" font-size="14.00">Fim</text>
+</g>
+<!-- set_nome&#45;&gt;end -->
+<g id="edge14" class="edge">
+<title>set_nome-&gt;end</title>
+<path fill="none" stroke="black" d="M2039.96,-100.4C2089.14,-95.76 2146.23,-90.38 2182.76,-86.94"/>
+<polygon fill="black" stroke="black" points="2182.73,-90.46 2192.36,-86.04 2182.07,-83.49 2182.73,-90.46"/>
+</g>
+<!-- ret_true&#45;&gt;end -->
+<g id="edge15" class="edge">
+<title>ret_true-&gt;end</title>
+<path fill="none" stroke="black" d="M2157.47,-111.63C2166.01,-107.79 2175,-103.75 2183.43,-99.96"/>
+<polygon fill="black" stroke="black" points="2184.66,-103.24 2192.34,-95.95 2181.79,-96.86 2184.66,-103.24"/>
+</g>
+<!-- ret_false&#45;&gt;end -->
+<g id="edge16" class="edge">
+<title>ret_false-&gt;end</title>
+<path fill="none" stroke="black" d="M1986.42,-51.23C2039.94,-58.6 2131.38,-71.19 2182.61,-78.24"/>
+<polygon fill="black" stroke="black" points="2181.92,-81.68 2192.31,-79.57 2182.88,-74.74 2181.92,-81.68"/>
+</g>
+<!-- catch_erro&#45;&gt;ret_false -->
+<g id="edge17" class="edge">
+<title>catch_erro-&gt;ret_false</title>
+<path fill="none" stroke="black" d="M1685.47,-28.05C1724.38,-27.38 1780.12,-27.3 1828.78,-30.62 1848.31,-31.95 1869.61,-34.44 1888.42,-37.02"/>
+<polygon fill="black" stroke="black" points="1887.89,-40.47 1898.28,-38.4 1888.87,-33.54 1887.89,-40.47"/>
+<text xml:space="preserve" text-anchor="middle" x="1779.62" y="-34.82" font-family="Times,serif" font-size="14.00">trata/retorna false</text>
+</g>
+</g>
+</svg>
