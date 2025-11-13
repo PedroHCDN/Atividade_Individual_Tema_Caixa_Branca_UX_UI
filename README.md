@@ -4,21 +4,35 @@ NOTAÇÃO DE GRAFO DE FLUXO:
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 151.42)">
 
 COMPLEXIDADE CICLOMATICA:
+
 CC(conectarBD) = 1 (fluxo base) + 1 (try-catch) = 2
+
+
 CC(verificarUsuario) = 1 (fluxo base) + 1 (try-catch) + 1 (if) = 3
+
+
 CC(conectarBD) = 2, CC(verificarUsuario) = 3
+
 CC(conectarBD) + CC(verificarUsuario) = 5
 
 CAMINHOS BÁSICOS:
+
 caminhos de conectarBD:
+
 C1 = Se a execução é normal: o driver é carregado e a conexão é obtida com sucesso = retorna conn
+
 C2 = Se ocorre exceção = leva pro catch e retorna null
 
 caminhos de verificarUsuario:
+
 C3 = Se a execução é normal (com nenhuma exceção): verifica rs.next() = é falso = result fica false = retorna false
+
 C4 = Se a execução é normal (com nenhuma exceção): verifica rs.next() = é verdadeiro = result fica true = retorn true
+
 C5 = Se exceção ocorre (dentro do try): levado para catch = result fica false = retorna false
 
 Em total:
+
 C1+C2+C3+C4+C5 = 5
+
 Tem 5 caminhos básicos totais.
