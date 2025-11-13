@@ -36,3 +36,7 @@ Em total:
 C1+C2+C3+C4+C5 = 5
 
 Tem 5 caminhos básicos totais.
+
+PLANILHA:
+[PLANO DE TESTE(4).xlsx](https://github.com/user-attachments/files/23531826/PLANO.DE.TESTE.4.xlsx)
+
